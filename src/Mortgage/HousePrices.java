@@ -72,17 +72,17 @@ public class HousePrices extends Users {
     public void roomCountToPrice() {
 
         if (getRoomCount()==0)
-            price+=10000;
+            price+=10_000;
         else if (getRoomCount()==1)
-            price+=20000;
+            price+=20_000;
         else if (getRoomCount()==2)
-            price+=30000;
+            price+=30_000;
         else if (getRoomCount()==3)
-            price+=40000;
+            price+=40_000;
         else if (getRoomCount()==4)
-            price+=50000;
+            price+=50_000;
         else if (getRoomCount()==5)
-            price+=60000;
+            price+=60_000;
 
     }
 
@@ -123,13 +123,13 @@ public class HousePrices extends Users {
         public void ConditionToPrice(){
 
             if (getWhichCondition().equalsIgnoreCase("new"))
-                price+=50000;
+                price+=50_00;
             else   if (getWhichCondition().equalsIgnoreCase("like new"))
-                price+=40000;
+                price+=40_000;
             else   if (getWhichCondition().equalsIgnoreCase("old"))
-                price+=30000;
+                price+=30_000;
             else   if (getWhichCondition().equalsIgnoreCase("Renew Required"))
-                price+=15000;
+                price+=15_000;
         }
 
     //---------------------------------------------------------------------------------------------------------
@@ -163,11 +163,11 @@ public class HousePrices extends Users {
 
     public void houseTypeToPrice(){
         if (getHouseType().equalsIgnoreCase("Apartment"))
-        price+=20000;
+        price+=20_000;
         else if (getHouseType().equalsIgnoreCase("condo"))
-        price+=30000;
+        price+=30_000;
         else if (getHouseType().equalsIgnoreCase("house"))
-        price+=40000;
+        price+=40_000;
     }
 
     //---------------------------------------------------------------------------------------------------------
@@ -191,12 +191,12 @@ public class HousePrices extends Users {
 
     //---------------------------------------------------------------------------------------------------------
         public int getPriceTotal(){
-            houseTypeToPrice();
-            ConditionToPrice();
-            roomCountToPrice();
-            price+= (price*(getStatesTax().getTax()))/100;
+            houseTypeToPrice();  // price+10_000
+            ConditionToPrice();  // price+ 20_000
+            roomCountToPrice();  //  price+40_000
+            price+= (price*(getStatesTax().getTax()))/100;  // price+ 10_000
 
-            return price;
+            return price;   // price = 80_000
         }
 
     //---------------------------------------------------------------------------------------------------------

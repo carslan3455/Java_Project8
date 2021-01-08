@@ -23,8 +23,8 @@ public enum StatesTax {
             Enumerated veri tipini şu şekilde ekle
                 NEWYORK tax tutarı 20
                 NEWJERSEY tax tutarı 15
-               FLORİDA tax tutarı 20
-                OHIO tax tutarı 20
+               FLORİDA tax tutarı 5
+                OHIO tax tutarı 12
 
                  private vairable int tax oluştur;
                  constructor  oluştur
@@ -33,12 +33,14 @@ public enum StatesTax {
 
     */
 
+
+
     NEWYORK(20),
     NEWJERSEY(15),
     FLORIDA(5),
     OHIO(12);
 
-    private int tax ;
+    private final int tax ;
 
     StatesTax(int tax) {
         this.tax=tax;

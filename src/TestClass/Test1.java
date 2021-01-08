@@ -2,7 +2,6 @@ package TestClass;
 
 import Mortgage.HousePrices;
 import Mortgage.StatesTax;
-import Mortgage.Users;
 import org.junit.Assert;
 import org.junit.Test;
 
